@@ -93,7 +93,7 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
               Text(
                 'LiyaDereje2@gmail.com',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                     color: Colors.white,
                     fontSize: MediaQuery.of(context).size.width * 0.04),
               ),
@@ -159,7 +159,7 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize:
-                                    MediaQuery.of(context).size.width * 0.04),
+                                    MediaQuery.of(context).size.width * 0.03),
                           )
                         ]),
                     ElevatedButton(

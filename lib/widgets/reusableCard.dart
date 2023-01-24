@@ -50,6 +50,7 @@ class MyReusableCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(right: 18),
       padding: const EdgeInsets.all(3),
@@ -58,8 +59,8 @@ class MyReusableCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(17),
       ),
-      height: 210,
-      width: 350,
+      height: size.height * 0.45,
+      width: size.width * 0.95,
       child: Column(
         children: [
           ListTile(
@@ -79,7 +80,7 @@ class MyReusableCard extends StatelessWidget {
           ),
           const Divider(
             color: Colors.black38,
-            thickness: 2.5,
+            thickness: 1.5,
             height: 1,
           ),
           Row(
@@ -101,13 +102,13 @@ class MyReusableCard extends StatelessWidget {
 }
 
 class DotWidget extends StatelessWidget {
-  final double totalWidth = 320, dashWidth = 10, emptyWidth = 5, dashHeight = 2;
+  final double totalWidth = 300, dashWidth = 10, emptyWidth = 5, dashHeight = 2;
 
   final Color dashColor = Colors.black45;
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.max,
+      mainAxisSize: MainAxisSize.min,
       children: List.generate(
         totalWidth ~/ (dashWidth + emptyWidth),
         (_) => Container(

@@ -23,8 +23,8 @@ class LoginScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
+        children: [
+          const Text(
             'Get started',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -86,6 +86,7 @@ class LoginScreen extends StatelessWidget {
                 iconSrc: 'lib/icons/apple.png',
                 press: () {},
               ),
+              
             ],
           ),
           SizedBox(

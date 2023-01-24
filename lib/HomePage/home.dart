@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           body: Column(children: [
             //for the upper first contents
             Container(
-              height: size.height * 0.5,
+              height: size.height * 0.52,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Color(0xcf7f9eee), Color(0xaba075ee)],
@@ -116,9 +116,12 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: size.height * 0.013,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    width: size.width,
+                    height: size.height * 0.25,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
                       children: [
                         MyReusableCard(
                           img: 'lib/icons/feres.png',
@@ -134,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                           img: 'lib/icons/feres.png',
                           title: 'Feres',
                           subtitile: 'https://www.feres.com',
-                        ),
+                        )
                       ],
                     ),
                   )

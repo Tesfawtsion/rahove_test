@@ -34,7 +34,7 @@ class Recent_opration_card extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: size.width * 0.05,
+            width: size.width * 0.03,
           ),
           Column(
             children: [
