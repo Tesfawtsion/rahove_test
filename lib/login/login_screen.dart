@@ -1,11 +1,9 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:rahove_ui/HomePage/home.dart';
 import 'package:rahove_ui/Signup/signup_screen.dart';
 import 'package:rahove_ui/constants.dart';
-import 'package:rahove_ui/login/components/textfeild_container.dart';
 
 import '../Signup/component/bottom_divider.dart';
 import '../Signup/component/social_icons.dart';
@@ -54,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               onChanged: (value) {},
               text: 'Password',
             ),
-            ForgetPassword(),
+            const ForgetPassword(),
             SizedBox(
               height: 20.h,
             ),
@@ -62,14 +60,14 @@ class LoginScreen extends StatelessWidget {
               text: 'Log in',
               press: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return HomePage();
+                  return const HomePage();
                 }));
               },
             ),
             SizedBox(
               height: 20.h,
             ),
-            BottomDevider(
+            const BottomDevider(
               text: 'Log in with',
             ),
             SizedBox(

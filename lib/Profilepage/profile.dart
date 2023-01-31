@@ -1,5 +1,5 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rahove_ui/HomePage/home.dart';
@@ -26,12 +26,12 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
     switch (i) {
       case 0:
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return HomePage();
+          return const HomePage();
         }));
         break;
       case 3:
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return SliverAppBarStatus();
+          return const SliverAppBarStatus();
         }));
         break;
     }
@@ -65,11 +65,11 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
 
   Widget onScrolledBar(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage('lib/icons/back.png'), fit: BoxFit.cover)),
       child: Center(
-        child: Container(
+        child: SizedBox(
           height: 300.w,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -78,13 +78,14 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                 height: 7.w,
               ),
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   radius: 63.r,
                   backgroundColor: Colors.white,
                   child: CircleAvatar(
                       radius: 60.r,
-                      backgroundImage: AssetImage('lib/icons/soliana.png')),
+                      backgroundImage:
+                          const AssetImage('lib/icons/soliana.png')),
                 ),
               ),
               Text(
@@ -109,17 +110,17 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Padding(
-                  padding: EdgeInsets.all(8.0.w),
-                  child: Text(
-                    'Edit Profile',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
+                child: Padding(
+                  padding: EdgeInsets.all(8.0.w),
+                  child: const Text(
+                    'Edit Profile',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
               )
             ],
           ),
@@ -134,7 +135,7 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
 
       background: Stack(children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('lib/icons/soliana.png'),
                   fit: BoxFit.cover)),
@@ -172,14 +173,14 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                         ]),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text(
-                        'Edit Profile',
-                        style: TextStyle(fontSize: 13.sp),
-                      ),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xff7d4cbb),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20))),
+                      child: Text(
+                        'Edit Profile',
+                        style: TextStyle(fontSize: 13.sp),
+                      ),
                     )
                   ],
                 ),
@@ -232,7 +233,7 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
         controller: _scrollController,
         slivers: <Widget>[
           SliverAppBar(
-            backgroundColor: Color.fromARGB(255, 138, 160, 255),
+            backgroundColor: const Color.fromARGB(255, 138, 160, 255),
             pinned: true,
             snap: false,
             floating: false,
@@ -270,9 +271,9 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                     Padding(
                       padding: const EdgeInsets.only(top: 40.0, bottom: 5),
                       child: Row(children: <Widget>[
-                        Container(
+                        SizedBox(
                             width: MediaQuery.of(context).size.width * 0.15,
-                            child: Divider(
+                            child: const Divider(
                               thickness: 1,
                             )),
                         Text(
@@ -282,7 +283,7 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                                   MediaQuery.of(context).size.width * 0.04,
                               color: Colors.black54),
                         ),
-                        Expanded(
+                        const Expanded(
                             child: Divider(
                           thickness: 1,
                         )),
