@@ -18,7 +18,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -61,14 +60,14 @@ class Body extends StatelessWidget {
           text: 'Sign Up',
           press: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return LoginScreen();
+              return const LoginScreen();
             }));
           },
         ),
         SizedBox(
           height: 20.h,
         ),
-        BottomDevider(
+        const BottomDevider(
           text: 'Sign up with',
         ),
         SizedBox(
@@ -97,7 +96,7 @@ class Body extends StatelessWidget {
         AlreadyHaveAccount(
           pressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return LoginScreen();
+              return const LoginScreen();
             }));
           },
           login: false,

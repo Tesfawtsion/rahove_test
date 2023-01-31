@@ -8,7 +8,6 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SafeArea(
       child: SingleChildScrollView(
@@ -18,7 +17,7 @@ class SignupScreen extends StatelessWidget {
             SizedBox(
               height: 14.h,
             ),
-            Body()
+            const Body()
           ],
         ),
       ),

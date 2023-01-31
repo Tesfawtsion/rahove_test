@@ -23,7 +23,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     var _selectedTab = _SelectedTab.home;
 
     void _handleIndexChanged(int i) {
@@ -31,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       switch (i) {
         case 3:
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return SliverAppBarStatus();
+            return const SliverAppBarStatus();
           }));
           break;
       }
@@ -68,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                             onTap: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return SliverAppBarStatus();
+                                return const SliverAppBarStatus();
                               }));
                             },
                             child: CircleAvatar(
@@ -77,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                               child: CircleAvatar(
                                 radius: 35.r,
                                 backgroundImage:
-                                    AssetImage('lib/icons/avatar.png'),
+                                    const AssetImage('lib/icons/avatar.png'),
                               ),
                             ),
                           ),
@@ -88,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white)),
                           SizedBox(width: 25.w),
-                          DashbordIcon(),
+                          const DashbordIcon(),
                         ]),
                     SizedBox(height: 10.w),
                     Padding(
@@ -154,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,
                   child: Padding(
-                    padding: EdgeInsets.only(bottom: 80.0),
+                    padding: const EdgeInsets.only(bottom: 80.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -164,59 +163,59 @@ class _HomePageState extends State<HomePage> {
                               color: kprimarycolor, fontSize: 13.sp),
                         ),
                         const SizedBox(height: 10),
-                        TextContainer(
+                        const TextContainer(
                           text: 'Today',
                         ),
-                        Recent_opration_card(
+                        const Recent_opration_card(
                           Phone: '+251 939 09 0908',
                           color: Colors.green,
                           imgurl: 'lib/icons/img1.png',
                           name: 'Yona Tesfaye',
                           price: '1000.2',
                         ),
-                        Divider(
+                        const Divider(
                             color: Colors.black38, thickness: 2.5, height: 1),
-                        Recent_opration_card(
+                        const Recent_opration_card(
                           Phone: '+251 939 09 0908',
                           color: Colors.red,
                           imgurl: 'lib/icons/mehret.png',
                           name: 'Yona Tesfaye',
                           price: '1000.2',
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        TextContainer(text: 'Yesterday'),
-                        Recent_opration_card(
+                        const TextContainer(text: 'Yesterday'),
+                        const Recent_opration_card(
                           Phone: '+251 939 09 0908',
                           color: Colors.green,
                           imgurl: 'lib/icons/soli.png',
                           name: 'Yona Tesfaye',
                           price: '1000.2',
                         ),
-                        Divider(
+                        const Divider(
                             color: Colors.black38, thickness: 2.5, height: 1),
-                        Recent_opration_card(
+                        const Recent_opration_card(
                           Phone: '+251 939 09 0908',
                           color: Colors.red,
                           imgurl: 'lib/icons/dawit.png',
                           name: 'Yona Tesfaye',
                           price: '1000.2',
                         ),
-                        Divider(
+                        const Divider(
                             color: Colors.black38, thickness: 2.5, height: 1),
-                        Recent_opration_card(
+                        const Recent_opration_card(
                           Phone: '+251 939 09 0908',
                           color: Colors.green,
                           imgurl: 'lib/icons/img1.png',
                           name: 'Yona Tesfaye',
                           price: '1000.2',
                         ),
-                        Divider(
+                        const Divider(
                             color: Colors.black38, thickness: 2.5, height: 1),
-                        Divider(
+                        const Divider(
                             color: Colors.black38, thickness: 2.5, height: 1),
-                        Recent_opration_card(
+                        const Recent_opration_card(
                           Phone: '+251 939 09 0908',
                           color: Colors.red,
                           imgurl: 'lib/icons/img1.png',
