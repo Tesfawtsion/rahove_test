@@ -21,87 +21,89 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Get started',
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 25.sp,
-                color: kprimarycolor),
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          Text(
-            'become a member of our platform',
-            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
-          ),
-          SizedBox(
-            height: 15.h,
-          ),
-          RoundedInputFeild(
-            hintText: 'Your Email',
-            onChanged: ((value) {}),
-            text: 'Email',
-          ),
-          SizedBox(
-            height: 15.h,
-          ),
-          RoundedPaswordFeild(
-            onChanged: (value) {},
-            text: 'Password',
-          ),
-          ForgetPassword(),
-          SizedBox(
-            height: 20.h,
-          ),
-          RoundedButton(
-            text: 'Log in',
-            press: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return HomePage();
-              }));
-            },
-          ),
-          SizedBox(
-            height: 20.h,
-          ),
-          BottomDevider(
-            text: 'Log in with',
-          ),
-          SizedBox(
-            height: 15.h,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              SocialMediaIcons(
-                iconSrc: 'lib/icons/facebook.png',
-                press: () {},
-              ),
-              SocialMediaIcons(
-                iconSrc: 'lib/icons/google.png',
-                press: () {},
-              ),
-              SocialMediaIcons(
-                iconSrc: 'lib/icons/apple.png',
-                press: () {},
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 25.h,
-          ),
-          AlreadyHaveAccount(
-            pressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SignupScreen();
-              }));
-            },
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Get started',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25.sp,
+                  color: kprimarycolor),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Text(
+              'become a member of our platform',
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 15.h,
+            ),
+            RoundedInputFeild(
+              hintText: 'Your Email',
+              onChanged: ((value) {}),
+              text: 'Email',
+            ),
+            SizedBox(
+              height: 15.h,
+            ),
+            RoundedPaswordFeild(
+              onChanged: (value) {},
+              text: 'Password',
+            ),
+            ForgetPassword(),
+            SizedBox(
+              height: 20.h,
+            ),
+            RoundedButton(
+              text: 'Log in',
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return HomePage();
+                }));
+              },
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            BottomDevider(
+              text: 'Log in with',
+            ),
+            SizedBox(
+              height: 15.h,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                SocialMediaIcons(
+                  iconSrc: 'lib/icons/facebook.png',
+                  press: () {},
+                ),
+                SocialMediaIcons(
+                  iconSrc: 'lib/icons/google.png',
+                  press: () {},
+                ),
+                SocialMediaIcons(
+                  iconSrc: 'lib/icons/apple.png',
+                  press: () {},
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 25.h,
+            ),
+            AlreadyHaveAccount(
+              pressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SignupScreen();
+                }));
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

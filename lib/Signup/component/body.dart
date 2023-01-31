@@ -4,6 +4,7 @@ import 'package:rahove_ui/Signup/component/social_icons.dart';
 import 'package:rahove_ui/component/already_have_account.dart';
 import 'package:rahove_ui/login/components/rounded_paswored_feild.dart';
 import 'package:rahove_ui/login/login_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../component/rounded_button.dart';
 import '../../constants.dart';
@@ -24,17 +25,17 @@ class Body extends StatelessWidget {
         Text('Welcome',
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700,
-                fontSize: 25,
+                fontSize: 25.sp,
                 color: kprimarycolor)),
         SizedBox(
-          height: size.height * 0.025,
+          height: 10.h,
         ),
         Text(
           'become a member of our platform',
-          style: GoogleFonts.poppins(),
+          style: GoogleFonts.poppins(fontSize: 14.sp),
         ),
         SizedBox(
-          height: size.height * 0.025,
+          height: 15.h,
         ),
         RoundedInputFeild(
           hintText: 'Your Email',
@@ -42,7 +43,7 @@ class Body extends StatelessWidget {
           text: 'Email',
         ),
         SizedBox(
-          height: size.height * 0.02,
+          height: 5.h,
         ),
         RoundedInputFeild(
           hintText: 'Your name',
@@ -50,11 +51,11 @@ class Body extends StatelessWidget {
           text: 'Full name',
         ),
         SizedBox(
-          height: size.height * 0.02,
+          height: 5.h,
         ),
         RoundedPaswordFeild(onChanged: (value) {}, text: 'Password'),
         SizedBox(
-          height: size.height * 0.04,
+          height: 20.h,
         ),
         RoundedButton(
           text: 'Sign Up',
@@ -65,13 +66,13 @@ class Body extends StatelessWidget {
           },
         ),
         SizedBox(
-          height: size.height * 0.045,
+          height: 20.h,
         ),
         BottomDevider(
           text: 'Sign up with',
         ),
         SizedBox(
-          height: size.height * 0.022,
+          height: 15.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +92,7 @@ class Body extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: size.height * 0.03,
+          height: 25.h,
         ),
         AlreadyHaveAccount(
           pressed: () {

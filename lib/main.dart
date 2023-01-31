@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Rahove',
-        home: SliverAppBarStatus(),
+        home: SplashScreen()
       ),
     );
   }
