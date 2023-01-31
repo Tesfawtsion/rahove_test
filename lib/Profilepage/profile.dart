@@ -1,6 +1,7 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rahove_ui/HomePage/home.dart';
 
 import 'commponents/profile_card.dart';
@@ -69,17 +70,20 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
               image: AssetImage('lib/icons/back.png'), fit: BoxFit.cover)),
       child: Center(
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: 300.w,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 7.w,
+              ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: CircleAvatar(
-                  radius: 63,
+                  radius: 63.r,
                   backgroundColor: Colors.white,
                   child: CircleAvatar(
-                      radius: 60,
+                      radius: 60.r,
                       backgroundImage: AssetImage('lib/icons/soliana.png')),
                 ),
               ),
@@ -88,19 +92,25 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: MediaQuery.of(context).size.width * 0.05),
+                    fontSize: 15.sp),
+              ),
+              SizedBox(
+                height: 6.w,
               ),
               Text(
                 'LiyaDereje2@gmail.com',
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
-                    fontSize: MediaQuery.of(context).size.width * 0.04),
+                    fontSize: 13.sp),
+              ),
+              SizedBox(
+                height: 6.w,
               ),
               ElevatedButton(
                 onPressed: () {},
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0.w),
                   child: Text(
                     'Edit Profile',
                     style: TextStyle(color: Colors.black),
@@ -136,13 +146,13 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
               width: MediaQuery.of(context).size.width,
               color: Colors.white38,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 43.0, horizontal: 25.0),
+                padding:
+                    EdgeInsets.symmetric(vertical: 30.0.h, horizontal: 25.0.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -150,23 +160,21 @@ class _SliverAppBarStatusState extends State<SliverAppBarStatus> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.05),
+                                fontSize: 15.sp),
                           ),
                           Text(
                             'LiyaDereje2@gmail.com',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.03),
+                                fontSize: 13.sp),
                           )
                         ]),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Edit Profile'),
+                      child: Text(
+                        'Edit Profile',
+                        style: TextStyle(fontSize: 13.sp),
                       ),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xff7d4cbb),

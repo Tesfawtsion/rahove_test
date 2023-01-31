@@ -4,6 +4,8 @@ import 'package:rahove_ui/login/login_screen.dart';
 import 'package:rahove_ui/spalsh_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'Profilepage/profile.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Rahove',
-        home: HomePage(),
+        home: SliverAppBarStatus(),
       ),
     );
   }
