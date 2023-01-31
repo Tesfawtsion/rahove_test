@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BottomDevider extends StatelessWidget {
   final String text;
@@ -9,7 +10,7 @@ class BottomDevider extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
-      width: size.width * 0.9,
+      width: 330.w,
       child: Row(
         children: <Widget>[
           BuildDivider(),
@@ -18,7 +19,9 @@ class BottomDevider extends StatelessWidget {
             child: Text(
               text,
               style: TextStyle(
-                  fontWeight: FontWeight.w500, color: Colors.grey.shade700),
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey.shade700,
+                  fontSize: 15.sp),
             ),
           ),
           BuildDivider(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SocialMediaIcons extends StatelessWidget {
   final String iconSrc;
@@ -14,7 +15,7 @@ class SocialMediaIcons extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 15),
+        margin: EdgeInsets.symmetric(horizontal: 15.sp),
         padding: EdgeInsets.all(2),
         decoration: BoxDecoration(
             shape: BoxShape.circle,

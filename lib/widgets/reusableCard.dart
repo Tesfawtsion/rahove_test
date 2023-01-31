@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
@@ -59,8 +60,8 @@ class MyReusableCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(17),
       ),
-      height: size.height * 0.45,
-      width: size.width * 0.95,
+      height: 182.w,
+      width: 333.w,
       child: Column(
         children: [
           ListTile(
@@ -70,11 +71,11 @@ class MyReusableCard extends StatelessWidget {
             ),
             title: Text(
               title,
-              style: const TextStyle(fontSize: 13),
+              style: TextStyle(fontSize: 13.sp),
             ),
             subtitle: Text(
               subtitile,
-              style: const TextStyle(fontSize: 10),
+              style: TextStyle(fontSize: 10.sp),
             ),
             trailing: const Icon(Icons.more_horiz),
           ),
@@ -102,7 +103,10 @@ class MyReusableCard extends StatelessWidget {
 }
 
 class DotWidget extends StatelessWidget {
-  final double totalWidth = 300, dashWidth = 10, emptyWidth = 5, dashHeight = 2;
+  final double totalWidth = 300.w,
+      dashWidth = 10,
+      emptyWidth = 5,
+      dashHeight = 2;
 
   final Color dashColor = Colors.black45;
   @override

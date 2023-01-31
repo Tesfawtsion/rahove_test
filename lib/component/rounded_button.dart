@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../constants.dart';
@@ -19,7 +20,7 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.8,
+      width: 270.w,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(29),
         child: TextButton(
@@ -29,7 +30,9 @@ class RoundedButton extends StatelessWidget {
           onPressed: press,
           child: Text(text,
               style: GoogleFonts.poppins(
-                  color: textColor, fontWeight: FontWeight.w500)),
+                  color: textColor,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15.sp)),
         ),
       ),
     );

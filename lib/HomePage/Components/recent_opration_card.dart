@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rahove_ui/constants.dart';
 
@@ -19,12 +20,12 @@ class Recent_opration_card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(vertical: 5, horizontal: 3),
       decoration: BoxDecoration(color: Color.fromARGB(31, 99, 97, 97)),
-      width: double.infinity,
+      width: 370.w,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           CircleAvatar(
             backgroundColor: Colors.transparent,
@@ -33,9 +34,6 @@ class Recent_opration_card extends StatelessWidget {
               scale: 0.09,
             ),
           ),
-          SizedBox(
-            width: size.width * 0.03,
-          ),
           Column(
             children: [
               Text(
@@ -43,19 +41,19 @@ class Recent_opration_card extends StatelessWidget {
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w400,
                     color: Colors.black,
-                    fontSize: 18),
+                    fontSize: 17.sp),
               ),
               Text(
                 Phone,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w200,
                     color: Colors.grey,
-                    fontSize: 13),
+                    fontSize: 12.sp),
               )
             ],
           ),
           SizedBox(
-            width: size.width * 0.2,
+            width: 20.w,
           ),
           Column(
             children: [
@@ -64,11 +62,16 @@ class Recent_opration_card extends StatelessWidget {
                   Icon(
                     Icons.add,
                     color: color,
+                    size: 20.r,
                   ),
-                  Text(price),
+                  Text(
+                    price,
+                    style: TextStyle(fontSize: 12.sp),
+                  ),
                   Text(
                     'ETB',
-                    style: GoogleFonts.poppins(color: kprimarycolor),
+                    style: GoogleFonts.poppins(
+                        color: kprimarycolor, fontSize: 12.sp),
                   )
                 ],
               ),
@@ -76,10 +79,12 @@ class Recent_opration_card extends StatelessWidget {
                 children: [
                   Text(
                     '04:08',
-                    style: GoogleFonts.poppins(fontWeight: FontWeight.w400),
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400, fontSize: 12.sp),
                   ),
                   Text('Am',
-                      style: GoogleFonts.poppins(fontWeight: FontWeight.w200))
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w200, fontSize: 12.sp))
                 ],
               ),
               Divider(color: Colors.black38, thickness: 2.5, height: 1)

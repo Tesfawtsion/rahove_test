@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:rahove_ui/HomePage/home.dart';
 import 'package:rahove_ui/Signup/signup_screen.dart';
@@ -18,25 +19,27 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'Get started',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 25,
+                fontSize: 25.sp,
                 color: kprimarycolor),
           ),
           SizedBox(
-            height: size.height * 0.025,
+            height: 10.h,
           ),
-          Text('become a member of our platform'),
+          Text(
+            'become a member of our platform',
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
+          ),
           SizedBox(
-            height: size.height * 0.04,
+            height: 15.h,
           ),
           RoundedInputFeild(
             hintText: 'Your Email',
@@ -44,7 +47,7 @@ class LoginScreen extends StatelessWidget {
             text: 'Email',
           ),
           SizedBox(
-            height: size.height * 0.02,
+            height: 15.h,
           ),
           RoundedPaswordFeild(
             onChanged: (value) {},
@@ -52,7 +55,7 @@ class LoginScreen extends StatelessWidget {
           ),
           ForgetPassword(),
           SizedBox(
-            height: size.height * 0.04,
+            height: 20.h,
           ),
           RoundedButton(
             text: 'Log in',
@@ -63,13 +66,13 @@ class LoginScreen extends StatelessWidget {
             },
           ),
           SizedBox(
-            height: size.height * 0.045,
+            height: 20.h,
           ),
           BottomDevider(
             text: 'Log in with',
           ),
           SizedBox(
-            height: size.height * 0.022,
+            height: 15.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -86,11 +89,10 @@ class LoginScreen extends StatelessWidget {
                 iconSrc: 'lib/icons/apple.png',
                 press: () {},
               ),
-              
             ],
           ),
           SizedBox(
-            height: size.height * 0.03,
+            height: 25.h,
           ),
           AlreadyHaveAccount(
             pressed: () {
@@ -113,16 +115,18 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 5),
+      margin: EdgeInsets.symmetric(vertical: 5.h),
       padding: EdgeInsets.symmetric(
-        horizontal: 40,
+        horizontal: 40.w,
       ),
       child: Align(
           alignment: Alignment.centerLeft,
           child: Text(
             'Forget Password? ',
             style: TextStyle(
-                color: Colors.grey.shade600, fontWeight: FontWeight.w400),
+                color: Colors.grey.shade600,
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp),
           )),
     );
   }
